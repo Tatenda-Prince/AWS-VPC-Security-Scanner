@@ -83,8 +83,116 @@ Click Create Topic.
 
 2.4.Make sure you confirm the subscription
 
+![image_alt](https://github.com/Tatenda-Prince/AWS-VPC-Security-Scanner/blob/e84970a308135c3133c2ce7747c740a02bfd2acd/img/Screenshot%202025-02-07%20123559.png)
+
+
+## Step 3: Create a Lambda Function to Scan Security Groups
+
+Go to the Lambda Console.
+
+3.1.Click Create Function.
+
+3.2.Choose Author from scratch.
+
+Provide a name (e.g., VPCSecurityScanner).
+
+Choose Python 3.x as the runtime.
+
+
 ![image_alt]()
 
+3.3.Under Permissions, create a new IAM role with the following permissions:
+
+`ec2:DescribeSecurityGroups`
+
+`logs:CreateLogGroup`, `logs:CreateLogStream`, `logs:PutLogEvents`
+
+`s3:PutObject`
+
+`sns:Publish`
+
+![image_alt]()
+
+
+3.4.Click Create Function.
+
+## Step 4: Write the Lambda Function Code
+
+
+4.1.In the Lambda function, paste the following Python code:
+
+```python
+import boto3
+import json
+from datetime import datetime
+
+def lambda_handler(event, context):
+    # Initialize AWS clients
+    ec2 = boto3.client('ec2')
+    s3 = boto3.client('s3')
+    sns = boto3.client('sns')
+    
+    # Initialize response variables
+    open_security_groups = []
+    sns_topic_arn = 'arn:aws:sns:us-east-1:664418964175:VPC-Security-Alerts'  # Replace with your actual ARN
+    bucket_name = 'tatenda-vpc-security-logs'  # Replace with your actual bucket name
+    
+    try:
+        # Describe Security Groups to find open ones
+        security_groups = ec2.describe_security_groups()['SecurityGroups']
+        
+        for sg in security_groups:
+            for permission in sg['IpPermissions']:
+                for ip_range in permission.get('IpRanges', []):
+                    if ip_range['CidrIp'] == '0.0.0.0/0':  # Open to the world
+                        open_security_groups.append(sg['GroupId'])
+        
+        # Check if any open security groups were found
+        if open_security_groups:
+            # Log findings to CloudWatch
+            print(f"Open Security Groups Found: {open_security_groups}")
+            
+            # Send SNS alert
+            sns.publish(
+                TopicArn=sns_topic_arn,
+                Message=f"Open Security Groups Found: {open_security_groups}",
+                Subject="VPC Security Alert"
+            )
+            
+            # Log findings to S3
+            timestamp = datetime.utcnow().isoformat()
+            s3.put_object(
+                Bucket=bucket_name,
+                Key=f"open-sg-findings/{timestamp}.json",
+                Body=json.dumps(open_security_groups)
+            )
+            
+        else:
+            print("No open security groups found.")
+        
+    except Exception as e:
+        # Catch and log any errors that occur during the process
+        print(f"Error occurred: {str(e)}")
+        sns.publish(
+            TopicArn=sns_topic_arn,
+            Message=f"Error in VPC Security Scanner: {str(e)}",
+            Subject="VPC Security Alert"
+        )
+    
+    return {
+        'statusCode': 200,
+        'body': json.dumps('Security Group Scan Complete')
+    }
+
+```
+
+4.2.Replace `YOUR_REGION` and `YOUR_ACCOUNT_ID` with your AWS region and account ID.
+
+
+4.3.Deploy the Lambda function.
+
+
+## Step 5: Schedule the Lambda Function with EventBridge
 
 
 

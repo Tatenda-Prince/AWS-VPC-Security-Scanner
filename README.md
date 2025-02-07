@@ -209,7 +209,7 @@ Under Event Source, choose Schedule.
 
 5.3.Set a fixed rate (e.g., 5 minutes) or a cron expression (e.g., cron(0/5 * * * ? *)).
 
-[image_alt]()
+[image_alt](https://github.com/Tatenda-Prince/AWS-VPC-Security-Scanner/blob/08c0e744b57eea100435c7ab955ddbba821e2e08/img/Screenshot%202025-02-07%20124444.png)
 
 Under Targets, select the Lambda function you created (VPCSecurityScanner).
 

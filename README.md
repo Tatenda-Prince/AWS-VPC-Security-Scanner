@@ -51,7 +51,7 @@ Choose the region where your VPC resides.
 
 1.4.Enable Versioning and Server-Side Encryption (SSE) for compliance.
 
-![image_alt]() 
+![image_alt](https://github.com/Tatenda-Prince/AWS-VPC-Security-Scanner/blob/6bd82f57c388175f137715e0bc74a75757c5838b/img/Screenshot%202025-02-07%20123055.png) 
 
 Click Create Bucket.
 

@@ -209,18 +209,71 @@ Under Event Source, choose Schedule.
 
 5.3.Set a fixed rate (e.g., 5 minutes) or a cron expression (e.g., cron(0/5 * * * ? *)).
 
-[image_alt](https://github.com/Tatenda-Prince/AWS-VPC-Security-Scanner/blob/08c0e744b57eea100435c7ab955ddbba821e2e08/img/Screenshot%202025-02-07%20124444.png)
+![image_alt](https://github.com/Tatenda-Prince/AWS-VPC-Security-Scanner/blob/08c0e744b57eea100435c7ab955ddbba821e2e08/img/Screenshot%202025-02-07%20124444.png)
 
 Under Targets, select the Lambda function you created (VPCSecurityScanner).
 
 
-[image_alt](https://github.com/Tatenda-Prince/AWS-VPC-Security-Scanner/blob/352a0aa943852b1edf6fb1d0ebf5ea97201946bc/img/Screenshot%202025-02-07%20124506.png)
+![image_alt](https://github.com/Tatenda-Prince/AWS-VPC-Security-Scanner/blob/352a0aa943852b1edf6fb1d0ebf5ea97201946bc/img/Screenshot%202025-02-07%20124506.png)
 
 
 Click Create.
 
 
 ## Step 6: Test the Solution
+
+6.1.Manually trigger the Lambda function to ensure it works.
+
+Test the Function:
+
+Click the Test button at the top of the Lambda function page.
+
+In the Configure Test Event dialog, choose Create New Test Event.
+
+Provide an event name (e.g., TestEvent).
+
+Use the following JSON as the test event (you can leave it empty or use a simple even
+
+```language
+json
+{
+  "key1": "value1",
+  "key2": "value2"
+}
+
+```
+
+Click Create.
+
+Click Test again to trigger the Lambda function.
+
+
+Check Execution Results:
+
+After the function runs, you’ll see the execution results in the Execution Results tab.
+
+Look for a `statusCode: 200` and a message like `Security Group Scan Complete.`
+
+
+
+![image_alt]()
+
+
+
+6.2.Check CloudWatch Logs for output.
+
+
+![image_alt]()
+
+
+6.3.Verify that SNS alerts are sent.
+
+
+![image_alt]()
+
+
+6.4.Confirm that logs are stored in the S3 bucket.
+
 
 
 

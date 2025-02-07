@@ -99,7 +99,7 @@ Provide a name (e.g., VPCSecurityScanner).
 Choose Python 3.x as the runtime.
 
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/AWS-VPC-Security-Scanner/blob/fa77e0a59491aea4e9640bd0cb6c6643618f3bc2/img/Screenshot%202025-02-07%20123721.png)
 
 3.3.Under Permissions, create a new IAM role with the following permissions:
 

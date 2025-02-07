@@ -46,7 +46,7 @@ You work as Security Cloud Enginner at Up The Chelsea healthcare provider needs 
 
 Choose the region where your VPC resides.
 
-![image_alt]() 
+![image_alt](https://github.com/Tatenda-Prince/AWS-VPC-Security-Scanner/blob/98ddb03dadd01dc089560616b8e645d296fd8083/img/Screenshot%202025-02-07%20123034.png) 
 
 
 1.4.Enable Versioning and Server-Side Encryption (SSE) for compliance.

@@ -214,7 +214,7 @@ Under Event Source, choose Schedule.
 Under Targets, select the Lambda function you created (VPCSecurityScanner).
 
 
-[image_alt]()
+[image_alt](https://github.com/Tatenda-Prince/AWS-VPC-Security-Scanner/blob/352a0aa943852b1edf6fb1d0ebf5ea97201946bc/img/Screenshot%202025-02-07%20124506.png)
 
 
 Click Create.

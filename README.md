@@ -263,7 +263,7 @@ Look for a `statusCode: 200` and a message like `Security Group Scan Complete.`
 6.2.Check CloudWatch Logs for output.
 
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/AWS-VPC-Security-Scanner/blob/36fe9c9725b037bc6cfa82ee8ee89d9009fb25ba/img/Screenshot%202025-02-07%20124927.png)
 
 
 6.3.Verify that SNS alerts are sent.

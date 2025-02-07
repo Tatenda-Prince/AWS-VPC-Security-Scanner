@@ -69,7 +69,7 @@ Click Create Bucket.
 
 Provide a name (e.g., `VPC-Security-Alerts`).
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/AWS-VPC-Security-Scanner/blob/92d7b18aa884894b592ea9902e4bdbfd6f6758bd/img/Screenshot%202025-02-07%20123314.png)
 
 
 

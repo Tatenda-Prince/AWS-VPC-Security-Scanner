@@ -256,7 +256,7 @@ Look for a `statusCode: 200` and a message like `Security Group Scan Complete.`
 
 
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/AWS-VPC-Security-Scanner/blob/317c672318676ab2b8b64e1bc1ad8949bac9a7d0/img/Screenshot%202025-02-07%20124824.png)
 
 
 

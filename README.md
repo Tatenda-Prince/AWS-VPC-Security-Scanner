@@ -269,7 +269,7 @@ Look for a `statusCode: 200` and a message like `Security Group Scan Complete.`
 6.3.Verify that SNS alerts are sent.
 
 
-![image_alt](https://github.com/Tatenda-Prince/AWS-VPC-Security-Scanner/blob/65fc8a2d7f2444168bbcdd049f0e1cd8f955bcfc/img/Screenshot%202025-02-07%20125044.png)
+![image_alt]()
 
 
 6.4.Confirm that logs are stored in the S3 bucket.

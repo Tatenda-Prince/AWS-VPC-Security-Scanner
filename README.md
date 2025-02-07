@@ -78,7 +78,7 @@ Click Create Topic.
 2.3.Subscribe your email or other endpoints to the topic for receiving alerts.
 
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/AWS-VPC-Security-Scanner/blob/9d65e50cc15c309cc845e57671f543933cb05e31/img/Screenshot%202025-02-07%20123531.png)
 
 
 2.4.Make sure you confirm the subscription

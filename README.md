@@ -111,7 +111,7 @@ Choose Python 3.x as the runtime.
 
 `sns:Publish`
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/AWS-VPC-Security-Scanner/blob/a4ca62b8ae7459afa9d9142e9935b571b33ad2a1/img/Screenshot%202025-02-07%20123746.png)
 
 
 3.4.Click Create Function.
@@ -193,6 +193,34 @@ def lambda_handler(event, context):
 
 
 ## Step 5: Schedule the Lambda Function with EventBridge
+
+Go to the EventBridge Console.
+
+5.1.Click Create Rule.
+
+Provide a name (e.g., VPCSecurityScannerRule).
+
+
+Under Event Source, choose Schedule.
+
+![image_alt]()
+
+
+
+5.3.Set a fixed rate (e.g., 5 minutes) or a cron expression (e.g., cron(0/5 * * * ? *)).
+
+[image_alt]()
+
+Under Targets, select the Lambda function you created (VPCSecurityScanner).
+
+
+[image_alt]()
+
+
+Click Create.
+
+
+## Step 6: Test the Solution
 
 
 

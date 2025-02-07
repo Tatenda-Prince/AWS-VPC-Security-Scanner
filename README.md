@@ -203,7 +203,7 @@ Provide a name (e.g., VPCSecurityScannerRule).
 
 Under Event Source, choose Schedule.
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/AWS-VPC-Security-Scanner/blob/e1fc5e1f28cd56c1df20b75092b32807ae1838e4/img/Screenshot%202025-02-07%20124345.png)
 
 
 

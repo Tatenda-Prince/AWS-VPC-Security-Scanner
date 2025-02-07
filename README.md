@@ -274,7 +274,18 @@ Look for a `statusCode: 200` and a message like `Security Group Scan Complete.`
 
 6.4.Confirm that logs are stored in the S3 bucket.
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/AWS-VPC-Security-Scanner/blob/10a3800d26f973fd9923efbcbf12d6db31b0a062/img/Screenshot%202025-02-07%20130056.png)
+
+
+## Future Enhanancement 
+
+We will add auto remediation for non compliant security group.
+
+# Congratulations
+
+We have successfully created AWS VPC Security Scanner provides automated security monitoring to detect open security groups, log findings, and send alerts. By integrating with EventBridge, it ensures real-time responses to misconfigurations.
+
+
 
 
 

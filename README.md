@@ -42,7 +42,7 @@ You work as Security Cloud Enginner at Up The Chelsea healthcare provider needs 
 
 1.2.Click Create Bucket.
 
-1.3.Provide a unique name (e.g., vpc-security-logs).
+1.3.Provide a unique name (e.g., `vpc-security-logs`).
 
 Choose the region where your VPC resides.
 
@@ -58,7 +58,34 @@ Click Create Bucket.
 
 1.5.As you can see the bucket was successfully created 
 
-![image_alt]() 
+![image_alt](https://github.com/Tatenda-Prince/AWS-VPC-Security-Scanner/blob/4f2e0f656a1bffb7145ecff7f47d235adbf193d7/img/Screenshot%202025-02-07%20123127.png) 
+
+
+## Step 2: Create an SNS Topic for Alerts
+
+2.1.Go to the SNS Console.
+
+2.2.Click Create Topic.
+
+Provide a name (e.g., `VPC-Security-Alerts`).
+
+![image_alt]()
+
+
+
+Click Create Topic.
+
+2.3.Subscribe your email or other endpoints to the topic for receiving alerts.
+
+
+![image_alt]()
+
+
+2.4.Make sure you confirm the subscription
+
+![image_alt]()
+
+
 
 
 
